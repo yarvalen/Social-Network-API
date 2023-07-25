@@ -4,6 +4,11 @@
     "mongoose": "^7.2.2"
   },
 
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+
   "devDependencies": {
     "nodemon": "^2.0.9"
   }
