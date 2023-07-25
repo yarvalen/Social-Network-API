@@ -11,7 +11,7 @@ const {
 
 router.route('/')
     .get(getAllUsers)
-    .post(createUser)
+    .post(createUser);
 
 router.route('/:id')
     .get(getUserById)
@@ -23,4 +23,4 @@ router.route('/:userId/friends/:friendId')
     .delete(deleteFriend)
 
 
-module.exports = router
+module.exports = router;
