@@ -6,7 +6,6 @@ This application is done by building an API for a social network web where users
 ## Installation
 Copy the repository to your computer. In the terminal run "npm i"  and  "npm start"
 
-## Demo
 
 ## Usage
 In the VS Code, open integrated terminal on server.js. Next create an .env file and add your MySQL username and password. If you don't have an account then press enter for next prompted step.
