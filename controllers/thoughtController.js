@@ -1,13 +1,15 @@
-const { User, Thought } = require('../models');
+const thought = require('./t'
+const user = require("./..models/user");
 
+const {User, Thought} = require 
 module.exports = {
-  // Get all courses
+
   getThoughts(req, res) {
     Thought.find()
       .then((thought) => res.json(thought))
       .catch((err) => res.status(500).json(err));
   },
-  // Get a course
+
   getSinglethought(req, res) {
     Thought.findOne({ _id: req.params.thoughtId })
       .select('-__v')
@@ -18,7 +20,7 @@ module.exports = {
       )
       .catch((err) => res.status(500).json(err));
   },
-  // Create a course
+  // Create a thought
   createthought(req, res) {
     Thought.create(req.body)
       .then((thought) => res.json(thought))
@@ -52,38 +54,7 @@ module.exports = {
       )
       .catch((err) => res.status(500).json(err));
   },
-  // new stuff
-  createReaction(req, res) {
-    Thought.findOneAndUpdate(
-        { _id: req.params.thoughtId },
-        { $addToSet: { reactions: newReaction } },
-        { runValidators: true, new: true }
-    )
-        .then((thought) =>
-            !thought
-                ? res.status(404).json({ message: 'No reactions with this id!' })
-                : res.json(thought)
-        )
-        .catch((err) => {
-            console.log(err);
-            res.status(500).json(err);
-        });
-},
-// DELETE: pull and remove a reaction by the reaction's reactionId value
-deleteReaction(req, res) {
-    Thought.findOneAndUpdate(
-        { _id: req.params.thoughtId },
-        { $pull: { reactions: { _id: req.params.reactionId } } },
-        { new: true }
-    )
-        .then((thought) =>
-            !thought
-                ? res.status(404).json({ message: 'No reactions with this id!' })
-                : res.json(thought)
-        )
-        .catch((err) => {
-            console.log(err);
-            res.status(500).json(err);
-        });
-},
 };
+module.exports = thoughtController;
+
+  

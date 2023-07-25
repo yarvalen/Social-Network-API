@@ -1,9 +1,7 @@
 # Social Network API
 
 ## Description
-This application tech blog has been created for developers to be able to publish their blog posts and comment on others blogs. In building this application, you will develop further knowlegde on MVC paradigm, Handlebars.js, Sequelize as the ORM, and the express-session npm package for authentication.
-
-build an API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list
+This application is done by building an API for a social network web where users can share their thoughts, react to friends’ thoughts, and create a friend list. In the process of creating this application will further knowlegde in using express.js and MongoDB.
 
 ## Installation
 Copy the repository to your computer. In the terminal run "npm i"  and  "npm start"
